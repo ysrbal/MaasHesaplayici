@@ -1,38 +1,38 @@
 public class Employee {
     String name;
-    int salary;
+    double salary;
     int workHours;
     int hireYear;
 
-    Employee(String name, int salary, int workHours, int hireYear) {
+    Employee(String name, double salary, int workHours, int hireYear) {
         this.name = name;
         this.salary = salary;
         this.workHours = workHours;
         this.hireYear = hireYear;
     }
 
-    int tax() {
-        int tax;
+    double tax() {
+        double tax;
         if (this.salary >= 1000) {
-            tax = this.salary * 3 / 100;
+            tax = this.salary * 3.0 / 100;
             return tax;
         } else {
             return 0;
         }
     }
 
-    int bonus() {
-        int bonus;
+    double bonus() {
+        double bonus;
         if (this.workHours > 40) {
-            bonus = (this.workHours * 30) - 1200;
+            bonus = (this.workHours * 30.0) - 1200.0;
             return bonus;
         } else {
             return 0;
         }
     }
 
-    int raiseSalary() {
-        int raiseSalary;
+    double raiseSalary() {
+        double raiseSalary;
         int currentYear = 2022;
         if (currentYear - this.hireYear < 10) {
             raiseSalary = this.salary * 5 / 100;
